@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+/* +++++++++++++++++> */
+/* HEADER */
+/* +++++++++++ */
+.headerlogo{
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+}
+
+
+.home__mainContainer .home__heroImage {
+  width: 100%;
+  height: 60vh;
+  background-image: url("../ENTREGA2-FINAL/assets/funny-close-cow-on-green-600w-744948658.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(90%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__mainContainer .home__heroImage h1 {
+  font-size: 2rem;
+  color: white;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.678);
+  padding: 1rem 0;
+  width: 100%;
+  text-align:right 
+}
+
+/* Media queries */
+
+@media screen and (min-width: 768px) {
+
+  .headerlogo{
+    position: center;
+  }
+
+.ul {
+  text-align: center;
+}
+  }
+
+/* +++++++++++++++++> */
+/* FIN DE HEADER */
+/* +++++++++++ */
+
+
+/* +++++++++++++++++> */
+/* FOOTER */
+/* +++++++++++ */
+
+.fa-brands:hover {
+    opacity: 0.7;
+    transform: scale(1.2) translateY(-2px)
+  
+  }
+  
+  .fa-brands {
+  background-color: #1d794000;
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    
+  }
+
+
+html {/*etiqueta raiz*/
+font-size: 1.5rem}
+
+p{font-size: 1rem; /*20px*/}
+
+footer {text-align: center;
+  background: radial-gradient(ellipse at top, rgb(0, 209, 35), transparent),
+  radial-gradient(ellipse at top, #70d553, transparent);
+  
+  }
+
+li ul li{
+  position: absolute;
+  display: block;
+  font-size: 30px;
+    text-align: center
+}
+
+
+
+/* +++++++++++++++++> */
+/* FIN DE FOOTER */
+/* +++++++++++ */
+
+/* +++++++++++++++++> */
+/* CAROUSEL */
+/* +++++++++++ */
+
+/********* Carousel *********/
+
+@keyframes carousel-slide {
+  0% {
+      transform: translateX(0%); 
+  }
+
+  25% {
+      transform: translateX(-25%);    
+  }
+
+  50% {
+      transform: translateX(-50%);
+  }
+
+  75% {
+      transform: translateX(-75%);
+  }
+}
+
+.carousel {
+  margin: 2rem auto;
+  padding: 2rem 0;
+  max-width: 800px;
+  text-align: center;
+  background-color: var(--carousel-bg-color);
+  overflow-x: hidden;
+}
+
+.carousel .slides {
+  padding-left: 0.5 rem;
+  /* 100% por cada slide */
+  width: 500%;
+  display: flex;
+  list-style: none;
+  transition: transform .5s ease-in-out;
+  animation: carousel-slide 12s ease-in-out 3s;
+  animation-iteration-count: infinite;
+}
+
+.carousel input {
+  display: none;
+}
+
+.carousel label {
+  border: medium solid var(--gray-dark-color);
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 .25rem;
+  display: inline-block;
+  width: .75rem;
+  height: .75rem;
+}
+
+#slide-1:checked ~ .slides {
+  transform: translateX(0%);
+}
+
+#slide-2:checked ~ .slides {
+  transform: translateX(-25%);
+}
+
+
+#slide-1:checked ~ .slides-nav label#dot-1,
+#slide-2:checked ~ .slides-nav label#dot-2,
